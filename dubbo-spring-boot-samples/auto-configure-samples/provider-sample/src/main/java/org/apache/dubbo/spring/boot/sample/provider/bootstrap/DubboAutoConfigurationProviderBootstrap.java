@@ -20,6 +20,7 @@ import org.apache.dubbo.spring.boot.sample.provider.service.DefaultDemoService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  * Dubbo Auto-Configuration Provider Bootstrap
@@ -28,6 +29,9 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
  * @since 2.7.0
  */
 @EnableAutoConfiguration
+@ImportResource(locations = {
+        "classpath:dubbo.xml"
+})
 public class DubboAutoConfigurationProviderBootstrap {
 
     public static void main(String[] args) {
